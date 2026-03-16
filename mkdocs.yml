@@ -1,9 +1,19 @@
-site_name: Bridge Zhang’s technology website – 张桥的技术网站        # 网站标题
-site_url: https://www.bridgezhang.com/    # 重要：部署后的实际地址
+# Copyright (c) 2026-2026 Bridge Zhang <bridge.zhang.123@gmail.com>
+
+# Project information
+site_name: Bridge to Mechanics
+site_url: https://www.bridgezhang.com/
 site_author: Bridge Zhang
+site_description: >-
+  Mechanical engineering notes, design insights, and practical knowledge — bridging theory and real-world engineering.
+  机械工程笔记、设计见解与实践知识 —— 连接理论与真实工程的桥梁。
+
+
 
 theme:
   name: material                # 使用Material主题
+  logo: images/logo.png
+  favicon: images/favicon.ico
   language: zh                   # 中文界面
   features:
     - navigation.tabs           # 顶部导航标签
@@ -27,11 +37,52 @@ plugins:
         - zh
         - en
 
+# Page tree
 nav:
-  - 首页: index.md
-  # 后续添加更多页面，格式：- 标题: 路径
-  # - 第一章: chapter1.md
-  - mandarin pronunciation training: mandarin-pronunciation-training.md
+  - Home: index.md
+
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - Site Guide: getting-started/site-guide.md
+      - Learning Path: getting-started/learning-path.md
+
+  - Design Insights:
+      - Overview: design/index.md
+      - Design Philosophy: design/design-philosophy.md
+      - Design Cases: design/design-cases.md
+
+  - Modeling & Drawings:
+      - Overview: modeling/index.md
+      - CAD Modeling: modeling/cad-modeling.md
+      - Drawing Standards: modeling/drawing-standards.md
+      - Dimensioning: modeling/dimensioning.md
+      - Tolerances & Fits: modeling/tolerances.md
+
+  - Manufacturing:
+      - Overview: manufacturing/index.md
+      - Machining Basics: manufacturing/machining-basics.md
+      - Process Planning: manufacturing/process-planning.md
+      - Surface Finish: manufacturing/surface-finish.md
+
+  - Measurement & Inspection:
+      - Overview: inspection/index.md
+      - Measurement Tools: inspection/tools.md
+      - GD&T Inspection: inspection/gdt.md
+      - Quality Control: inspection/quality-control.md
+
+  - About:
+      - About Me: about/about.md
+      - This Site: about/site.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bridgezhang123
+
+    - icon: fontawesome/solid/envelope
+      link: mailto:bridge.zhang.123@gmail.com
+  copyright: "© 2026 张桥"
+
 
 markdown_extensions:
   - pymdownx.highlight
