@@ -8,8 +8,10 @@ site_description: >-
   Mechanical engineering notes, design insights, and practical knowledge — bridging theory and real-world engineering.
   机械工程笔记、设计见解与实践知识 —— 连接理论与真实工程的桥梁。
 
+# Copyright
+copyright: Copyright &copy; 2026-2026 Bridge Zhang
 
-
+# Configuration
 theme:
   name: material                # 使用Material主题
   logo: images/logo.png
