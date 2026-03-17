@@ -13,22 +13,28 @@ copyright: Copyright &copy; 2026-2026 Bridge Zhang
 
 # Configuration
 theme:
-  name: material                # 使用Material主题
+  name: material
   logo: images/logo.png
   favicon: images/favicon.ico
-  language: zh                   # 中文界面
+  language: zh
   features:
-    - navigation.tabs           # 顶部导航标签
-    - navigation.top            # 返回顶部按钮
-    - search.highlight          # 搜索高亮
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.code.annotate
   palette:
-    - scheme: default           # 亮色模式
+    - scheme: default
       primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: 切换至深色模式
-    - scheme: slate              # 深色模式
+    - scheme: slate
       primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: 切换至亮色模式
@@ -42,50 +48,53 @@ plugins:
 # Page tree
 nav:
   - Home: index.md
-
   - Getting Started:
-      - Overview: getting-started/index.md
-      - Site Guide: getting-started/site-guide.md
-      - Learning Path: getting-started/learning-path.md
-
+    - getting-started/index.md
+    - Site Guide: getting-started/site-guide.md
+    - Learning Path: getting-started/learning-path.md
+  - Mechanical Notes: mechanical/index.md 
   - Design Insights:
-      - Overview: design/index.md
-      - Design Philosophy: design/design-philosophy.md
-      - Design Cases: design/design-cases.md
-
+    - design/index.md
+    - Design Philosophy: design/design-philosophy.md
+    - Design Cases: design/design-cases.md
   - Modeling & Drawings:
-      - Overview: modeling/index.md
-      - CAD Modeling: modeling/cad-modeling.md
-      - Drawing Standards: modeling/drawing-standards.md
-      - Dimensioning: modeling/dimensioning.md
-      - Tolerances & Fits: modeling/tolerances.md
-
+    - modeling/index.md
+    - CAD Modeling: modeling/cad-modeling.md
+    - Drawing Standards: modeling/drawing-standards.md
+    - Dimensioning: modeling/dimensioning.md
+    - Tolerances & Fits: modeling/tolerances.md
   - Manufacturing:
-      - Overview: manufacturing/index.md
-      - Machining Basics: manufacturing/machining-basics.md
-      - Process Planning: manufacturing/process-planning.md
-      - Surface Finish: manufacturing/surface-finish.md
-
+    - manufacturing/index.md
+    - Machining Basics: manufacturing/machining-basics.md
+    - Process Planning: manufacturing/process-planning.md
+    - Surface Finish: manufacturing/surface-finish.md
   - Measurement & Inspection:
-      - Overview: inspection/index.md
-      - Measurement Tools: inspection/tools.md
-      - GD&T Inspection: inspection/gdt.md
-      - Quality Control: inspection/quality-control.md
-
+    - inspection/index.md
+    - Measurement Tools: inspection/tools.md
+    - GD&T Inspection: inspection/gdt.md
+    - Quality Control: inspection/quality-control.md
   - About:
-      - About Me: about/about.md
-      - This Site: about/site.md
+    - about/about.md
+    - This Site: about/site.md
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/bridgezhang123
-
     - icon: fontawesome/solid/envelope
       link: mailto:bridge.zhang.123@gmail.com
-  copyright: "© 2026 张桥"
-
 
 markdown_extensions:
-  - pymdownx.highlight
-  - pymdownx.superfences      # 代码块增强
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true

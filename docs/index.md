@@ -1,26 +1,75 @@
-\# 欢迎访问我的技术文档站
+![bridge-hero](images/bridge-hero.png){ style="border-radius:12px" }
 
+# BridgeZhang
 
+## Mechanical Engineering Notes
 
-这里记录我在编程学习过程中的笔记和心得。
+Precision · Engineering · Thinking
 
+[Start Reading](mechanical/index.md){ .md-button .md-button--primary }
+[GitHub](https://github.com/bridgezhang){ .md-button }
 
+---
 
-\## 📚 主要内容
+## About This Site
 
+This website records my learning and thinking in mechanical engineering.
 
+Topics include:
 
-\- \*\*Python学习笔记\*\*
+- Mechanical design
+- Tolerance and precision
+- Engineering experience
+- Professional growth
 
-\- \*\*MkDocs使用指南\*\*
+The goal is to build a long-term **engineering knowledge base**.
 
-\- \*\*Git版本控制\*\*
+---
 
+## Knowledge Areas
 
+<div class="grid cards" markdown>
 
-\## 🚀 快速开始
+-   ⚙️ **Mechanical Design**
 
+    ---
 
+    Principles and case studies of mechanical design.
 
-从左侧导航栏选择感兴趣的主题开始阅读。
+-   📐 **Tolerance & Precision**
 
+    ---
+
+    Fits, tolerances and precision engineering.
+
+-   🧠 **Engineering Thinking**
+
+    ---
+
+    Long-term professional development.
+
+-   🛠️ **Tools & Methods**
+
+    ---
+
+    Engineering tools and workflows.
+
+</div>
+
+---
+
+## Latest Notes
+
+- [Mechanical tolerance fundamentals](mechanical/index.md)
+- [Engineering documentation methods](mechanical/index.md)
+- [Learning roadmap for mechanical engineers](mechanical/index.md)
+
+---
+
+## Philosophy
+
+Engineering is not only about solving problems.
+
+It is about building structures that last.
+
+Just like a **bridge**.
