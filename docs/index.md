@@ -1,75 +1,49 @@
-![bridge-hero](images/bridge-hero.png){ style="border-radius:12px" }
-
-# BridgeZhang
-
-## Mechanical Engineering Notes
-
-Precision · Engineering · Thinking
-
-[Start Reading](mechanical/index.md){ .md-button .md-button--primary }
-[GitHub](https://github.com/bridgezhang){ .md-button }
-
+---
+template: home.html
+title: Home
+hide:
+  - navigation
+  - toc
+hero_kicker: Bridge to Mechanics
+hero_title_lines:
+  - The bridge between engineers
+  - 工程师之间的桥梁
+hero_description: >-
+  Mechanical engineering notes, design insights, and practical methods.
+  Bridging theory and real-world engineering.
+primary_button:
+  text: Get Started
+  link: getting-started/
+secondary_button:
+  text: Learn More
+  link: "#home-cards"
+scroll_text: Scroll down
+cards_title: Knowledge Areas
+cards:
+  - title: Mechanical Design
+    description: Principles and case studies of mechanical design.
+  - title: Tolerance & Precision
+    description: Fits, tolerances and precision engineering.
+  - title: Engineering Thinking
+    description: Long-term professional development.
+  - title: Tools & Methods
+    description: Engineering tools and workflows.
+about:
+  title: About Site / 关于站点
+  description: >-
+    Thank you for visiting this site. If you have any suggestions about content,
+    layout, or site experience, please feel free to contact us. The bridge between engineers.
+  button_text: Learn More
+  button_link: about/site/
+connect:
+  title: Let's keep in touch
+  links:
+    - icon: fontawesome/brands/twitter
+      text: Follow @bridgezhang on Twitter
+      link: https://twitter.com/@bridgezhang
+    - icon: fontawesome/brands/github
+      text: Follow bridgezhang123 on GitHub
+      link: https://github.com/bridgezhang123
 ---
 
-## About This Site
-
-This website records my learning and thinking in mechanical engineering.
-
-Topics include:
-
-- Mechanical design
-- Tolerance and precision
-- Engineering experience
-- Professional growth
-
-The goal is to build a long-term **engineering knowledge base**.
-
----
-
-## Knowledge Areas
-
-<div class="grid cards" markdown>
-
--   ⚙️ **Mechanical Design**
-
-    ---
-
-    Principles and case studies of mechanical design.
-
--   📐 **Tolerance & Precision**
-
-    ---
-
-    Fits, tolerances and precision engineering.
-
--   🧠 **Engineering Thinking**
-
-    ---
-
-    Long-term professional development.
-
--   🛠️ **Tools & Methods**
-
-    ---
-
-    Engineering tools and workflows.
-
-</div>
-
----
-
-## Latest Notes
-
-- [Mechanical tolerance fundamentals](mechanical/index.md)
-- [Engineering documentation methods](mechanical/index.md)
-- [Learning roadmap for mechanical engineers](mechanical/index.md)
-
----
-
-## Philosophy
-
-Engineering is not only about solving problems.
-
-It is about building structures that last.
-
-Just like a **bridge**.
+Welcome to Bridge to Mechanics.

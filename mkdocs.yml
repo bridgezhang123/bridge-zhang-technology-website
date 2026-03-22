@@ -14,9 +14,10 @@ copyright: Copyright &copy; 2026-2026 Bridge Zhang
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   logo: images/logo.png
   favicon: images/favicon.ico
-  language: zh
+  language: en
   features:
     - navigation.tabs
     - navigation.top
@@ -73,9 +74,11 @@ nav:
     - Measurement Tools: inspection/tools.md
     - GD&T Inspection: inspection/gdt.md
     - Quality Control: inspection/quality-control.md
-  - About:
-    - about/about.md
-    - This Site: about/site.md
+  - About/关于:
+    - about/index.md
+    - About Me/关于作者: about/author.md
+    - About Site/关于站点: about/site.md
+    - Changelog/更新日志: about/changelog.md
 
 extra:
   social:
@@ -98,3 +101,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.tasklist:
       custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/home.js

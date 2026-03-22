@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+
+{% set meta = page.meta if page and page.meta else {} %}
+{% set hero_title_lines = meta.get("hero_title_lines", []) %}
+{% set primary_button = meta.get("primary_button", {}) %}
+{% set secondary_button = meta.get("secondary_button", {}) %}
+{% set cards = meta.get("cards", []) %}
+{% set about = meta.get("about", {}) %}
+{% set connect = meta.get("connect", {}) %}
+{% set connect_links = connect.get("links", []) %}
+
+{% block content %}
+<section class="home-hero home-panel" id="home-hero">
+  <div class="home-hero__overlay"></div>
+  <div class="home-hero__content reveal" data-reveal>
+    <p class="home-hero__kicker">{{ meta.get("hero_kicker", site_name) }}</p>
+    <h1>
+      {% for line in hero_title_lines %}
+      <span class="home-hero__line">{{ line }}</span>
+      {% endfor %}
+    </h1>
+    <p>{{ meta.get("hero_description", "") }}</p>
+    <div class="home-hero__actions">
+      {% if primary_button.get("text") and primary_button.get("link") %}
+      <a class="home-btn home-btn--primary" href="{{ primary_button.get("link") }}">{{ primary_button.get("text") }}</a>
+      {% endif %}
+      {% if secondary_button.get("text") and secondary_button.get("link") %}
+      <a class="home-btn home-btn--ghost" href="{{ secondary_button.get("link") }}">{{ secondary_button.get("text") }}</a>
+      {% endif %}
+    </div>
+    <a class="home-hero__scroll" href="#home-cards">{{ meta.get("scroll_text", "Scroll down") }}</a>
+  </div>
+</section>
+
+<section class="home-content home-panel" id="home-cards">
+  <div class="home-container reveal" data-reveal>
+    <h2>{{ meta.get("cards_title", "Knowledge Areas") }}</h2>
+    <div class="home-cards" role="list">
+      {% for card in cards %}
+      <article class="home-card" role="listitem">
+        <h3>{{ card.get("title", "") }}</h3>
+        <p>{{ card.get("description", "") }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-contact home-panel" id="home-contact">
+  <div class="home-container home-contact__grid">
+    <div class="home-contact__left reveal" data-reveal>
+      <h2>{{ about.get("title", "About Site") }}</h2>
+      <p>{{ about.get("description", "") }}</p>
+      {% if about.get("button_text") and about.get("button_link") %}
+      <a class="home-btn home-btn--dark" href="{{ about.get("button_link") }}">{{ about.get("button_text") }}</a>
+      {% endif %}
+    </div>
+
+    <div class="home-contact__right reveal" data-reveal>
+      <h3>{{ connect.get("title", "Let's keep in touch") }}</h3>
+      <ul>
+        {% for item in connect_links %}
+        <li>
+          {% if item.get("icon") %}
+          <span class="twemoji">{% include ".icons/" ~ item.get("icon") ~ ".svg" ignore missing %}</span>
+          {% endif %}
+          <a href="{{ item.get("link", "#") }}">{{ item.get("text", "") }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
