@@ -1,0 +1,2898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mechanical engineering notes, design insights, and practical knowledge — bridging theory and real-world engineering. 机械工程笔记、设计见解与实践知识 —— 连接理论与真实工程的桥梁。">
+      
+      
+        <meta name="author" content="Bridge Zhang">
+      
+      
+        <link rel="canonical" href="https://www.bridgezhang.com/modeling/cad-modeling/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../drawing-standards/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>CAD Modeling - Bridge Between Engineers</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3d" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Bridge Between Engineers" class="md-header__button md-logo" aria-label="Bridge Between Engineers" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bridge Between Engineers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CAD Modeling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../design/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Design Insights/设计见解
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Modeling & Drawings
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manufacturing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Manufacturing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../measurement/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Measurement
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About/关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Bridge Between Engineers" class="md-nav__button md-logo" aria-label="Bridge Between Engineers" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Bridge Between Engineers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../getting-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/site-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Site Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/learning-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../design/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Insights/设计见解
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Design Insights/设计见解
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/design-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeling & Drawings
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modeling & Drawings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAD Modeling
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAD Modeling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        test/前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心痛点概览
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心痛点概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点一：同名文件冲突——打开装配体时，端盖到底是谁家的端盖？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点二：版本迭代混乱——v2版本是直接复制文件夹吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点三：外部引用管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-downbottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点四：Top-down还是Bottom-up——改一次舱体尺寸，端盖需要手动改几个尺寸？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点五：参数化建模——值不值得用？什么时候用？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点六：配置功能的边界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本迭代管理规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="版本迭代管理规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件操作核心原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本迭代策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部引用管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D建模规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D建模规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-downbottom-up_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top-down与Bottom-up的选用原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数化建模的使用原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置功能的应用与陷阱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部参考的“冲突前后关系”问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循环引用的识别与修复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大型装配体性能优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        草图与特征层面的常见错误速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐工作流程与快速决策清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推荐工作流程与快速决策清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、项目启动阶段：文件夹与版本策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、外部引用决策
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、建模方法选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、日常操作快速参考卡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、性能优化快速清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、常见问题诊断速查表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键系统路径与设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多用户环境下的文件锁定问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drawing-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drawing Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dimensioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensioning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Naming Standards/命名标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../manufacturing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manufacturing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manufacturing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manufacturing/machining-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machining Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manufacturing/process-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manufacturing/surface-finish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Surface Finish
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../measurement/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurement
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Measurement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../measurement/tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Measurement Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../measurement/gdt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GD&T Inspection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../measurement/quality-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quality Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../about/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About/关于
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About/关于
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/author/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Me/关于作者
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About Site/关于站点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog/更新日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        test/前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        核心痛点概览
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="核心痛点概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点一：同名文件冲突——打开装配体时，端盖到底是谁家的端盖？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点二：版本迭代混乱——v2版本是直接复制文件夹吗？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点三：外部引用管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-downbottom-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点四：Top-down还是Bottom-up——改一次舱体尺寸，端盖需要手动改几个尺寸？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点五：参数化建模——值不值得用？什么时候用？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        痛点六：配置功能的边界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本迭代管理规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="版本迭代管理规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件操作核心原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本迭代策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部引用管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D建模规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D建模规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-downbottom-up_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top-down与Bottom-up的选用原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数化建模的使用原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置功能的应用与陷阱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部参考的“冲突前后关系”问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循环引用的识别与修复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        大型装配体性能优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        草图与特征层面的常见错误速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐工作流程与快速决策清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="推荐工作流程与快速决策清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、项目启动阶段：文件夹与版本策略
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、外部引用决策
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、建模方法选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、日常操作快速参考卡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、性能优化快速清单
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、常见问题诊断速查表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键系统路径与设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多用户环境下的文件锁定问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3d">3D建模与文件版本迭代管理规范</h1>
+<h2 id="test">test/前言</h2>
+<p>着手规划系列化的文章：
+1. SolidWorks建模-0 系列文章总览，以水下耐压舱为建模示例并贯穿始终
+以建模需要考量的步骤为顺序撰写</p>
+<p>SolidWorks建模-n，序列文章编号
+1. 从零部件标准化的命名开始(包含文件夹命名)
+1. 建模原则对比：Top-down(自上而下) vs Bottom-up(自底向上)
+1. 浅析参数化建模
+1. 配置功能的使用及其边界
+1. 图纸规范--模板解析(包含右上角的未注公差等)，模板带自己的logo、名称和网址引流
+1. 图纸规范--标注的基本要求
+1. 图纸规范--公差配合的标注
+1. 图纸规范--爆炸视图的使用
+1. 图纸规范--BOM表的使用
+1. 以文件的版本迭代管理结束</p>
+<p><strong>规范二字意味着什么</strong></p>
+<p>规范二字意味着对建模与文件版本迭代管理内在规律的思考，即对更合理的建模工作流（workflow）的思考。</p>
+<p>版本迭代管理的规范涉及命名、迭代管理等内容，属于整体规划的内容；3D建模规范是具体的建模工作，属于局部的细节设计。遵循先整体再局部的设计原则，本文先说明版本迭代管理，再展开建模规范。</p>
+<p><strong>示例说明</strong></p>
+<p>本文以公开大致尺寸数据的RD Instruments或EdgeTech的类似ADCP的产品为建模辅助说明。ADCP（声学多普勒流速剖面仪）属于典型的耐压舱设备，包含舱体、端盖、密封件、紧固件等组件，其装配关系能够充分体现建模规范中的各类典型场景。</p>
+<p><strong>参考说明</strong></p>
+<p>本文所给的规范，尽量参考了现有的标准、领先公司的规范等资料，并给出出处；对于作者自身的经验分享，请谨慎参考。</p>
+<p><strong>软件说明</strong></p>
+<p>尽管各种建模软件在建模流程上有较多的一致，但仍有细节上的差异；本文针对具体的建模软件描述，针对的是SolidWorks 2018。</p>
+<hr />
+<h2 id="_1">核心痛点概览</h2>
+<p>在长期的建模实践中，我们积累了大量模型文件，也遇到了各种各样的困扰。这些问题看似零散，实则背后有着共性的根源——缺乏统一的规范。下面列出的是工程师在日常建模中最为常见的几类痛点。</p>
+<hr />
+<h3 id="_2">痛点一：同名文件冲突——打开装配体时，端盖到底是谁家的端盖？</h3>
+<blockquote>
+<p>在长期的建模积累中，硬盘里是否有两个同为“端盖（举例）”的零件？SolidWorks以零件名称和路径检索零部件，若另一同名零部件已经打开，则可能出现被装配体引用关系混乱。如何避免零部件同名冲突并提升专业性？</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>你从某项目文件夹中复制了一个“端盖”零件到新项目，稍作修改后使用。某天打开旧项目的装配体时，发现端盖莫名其妙变成了新项目的形状——因为SolidWorks优先检索到了已打开的同名文件，装配体的引用关系被悄然替换。</p>
+<hr />
+<h3 id="v2">痛点二：版本迭代混乱——v2版本是直接复制文件夹吗？</h3>
+<blockquote>
+<p>在产品（模型）升级为第二版（v2）时，是直接复制整个模型文件夹命名为xxxx.v2吗？显然此法又导致零部件同名冲突。其次，v2版必然会对部分零部件进行修改完善，而SolidWorks是全相关的系统，没有合理的版本迭代管理，很容易导致全相关关系的混乱？</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>产品升级到v2，你复制了整个文件夹，重命名为“产品名_v2”。在v2文件夹中修改了几个零件后，打开v1的装配体——v1的零件也被改成了v2的样子。更糟的是，你甚至没有意识到这个问题，直到客户投诉说提供的图纸和实物对不上。</p>
+<hr />
+<h3 id="_3">痛点三：外部引用管理</h3>
+<blockquote>
+<p>项目A调用项目B的一个零件（如“端盖”），是直接复制端盖零件到项目A的建模文件夹，还是将链接关系直接指向项目B？紧固件、轴承等标准件是混杂在总装配体文件夹中还是单独的文件夹存放？即如何引用外部零部件？看似无足轻重，却极大影响着模型的可维护性、可修改性，尤其是模型庞大以后。</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>一个。</p>
+<hr />
+<h3 id="top-downbottom-up">痛点四：Top-down还是Bottom-up——改一次舱体尺寸，端盖需要手动改几个尺寸？</h3>
+<blockquote>
+<p>以耐压舱设备设计举例，显然有如下装配/链接关系：</p>
+</blockquote>
+<ul>
+<li>舱体的外径和两侧的端盖外径一致</li>
+<li>舱体上的螺钉过孔和端盖上的螺钉过孔匹配</li>
+<li>端盖上的定位凸台外径与舱体内径一致</li>
+</ul>
+<blockquote>
+<p>如果采用自底向上（Bottom-up）的装配体建模方式，即舱体与端盖分开建模而没有链接关系，那么当需要修改舱体尺寸时，每个端盖的外径、凸台外径、螺钉过孔定位直径数据等需要手动修改，在相应图纸中也需要时刻留意它们是否匹配，费时费力。</p>
+<p>如果采用自上向下（Top-down）的装配体建模方式，上述装配关系由SolidWorks自动维护，只需关注单个舱体的数据即可，建模工作由繁琐的“画图”转变为类似配置的工作。如何确保自上向下建模方式的正确运用并符合版本迭代管理的要求？</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>项目进展到第三轮评审，舱体外径从150mm调整为155mm。你打开舱体模型，修改了外径尺寸，然后打开端盖模型，修改外径、凸台外径、螺钉过孔定位直径……改完左端盖，改右端盖，改完端盖改图纸。改完所有关联零件后，你发现舱体上的螺钉过孔数量从6个变成了8个——是的，这次修改的不仅仅是尺寸，还有规格。你漏掉了端盖上的螺钉过孔数量。这个错误直到样机装配时才发现，这时等待你的是一周的交期延误和领导的面谈。</p>
+<hr />
+<h3 id="_4">痛点五：参数化建模——值不值得用？什么时候用？</h3>
+<blockquote>
+<p>被广泛运用的参数化建模，值不值得用？什么时候用？</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>你花了两个小时，为端盖建立了一套完整的方程式系统：外径关联舱体外径、凸台外径关联舱体内径、螺钉过孔定位直径关联舱体上的定位圆直径。你感到非常自豪。第二天，结构方案调整，舱体从圆形改成了方形。你的端盖方程式系统彻底崩溃，修复它花了四个小时，比直接重新建模还多一倍时间。你开始怀疑：参数化建模，到底值不值得用？</p>
+<hr />
+<h3 id="_5">痛点六：配置功能的边界</h3>
+<blockquote>
+<p>Solidworks的配置功能。系列零件的生成与配置；爆炸视图的运用等。</p>
+</blockquote>
+<p><strong>场景还原</strong></p>
+<p>你需要在装配体中插入三种长度的螺钉：M3×6、M3×8、M3×10。你创建了一个螺钉模型，建立了三个配置，分别对应三种长度。一切看起来都很美好。后来你需要在这个螺钉上增加一个轴径定位台阶，你在“M3×6”配置中完成了修改，但忘记了“M3×8”和“M3×10”也需要同样的特征。最终，三种长度的螺钉出现在了同一台设备的不同位置，它们的形状却不一样——这是一种比同名冲突更难排查的“配置漂移”。</p>
+<hr />
+<h2 id="_6">版本迭代管理规范</h2>
+<p>版本迭代管理是整体规划层面的工作，它决定了模型文件的组织结构、命名规则和引用关系，是保证模型可维护性的基础。</p>
+<h3 id="_7">文件操作核心原则</h3>
+<p>理解SolidWorks文件管理机制的关键，在于认识内部ID与外部ID的区别：</p>
+<table>
+<thead>
+<tr>
+<th>ID类型</th>
+<th>定义</th>
+<th>用户可见性</th>
+<th>修改方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内部ID</td>
+<td>软件首次保存时自动分配的唯一标识</td>
+<td>不可见</td>
+<td>不可修改</td>
+</tr>
+<tr>
+<td>外部ID</td>
+<td>文件名</td>
+<td>可见</td>
+<td>可修改</td>
+</tr>
+</tbody>
+</table>
+<p>当两个文件的文件名相同但内部ID不同时，SolidWorks在同时打开这两个文件的情况下，可能会错误地使用先打开的那个文件替换后打开的引用关系。这是同名冲突的技术根源。</p>
+<p>基于这一机制，文件操作的规范如下：</p>
+<table>
+<thead>
+<tr>
+<th>操作需求</th>
+<th>正确方法</th>
+<th>错误方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>复制零件用于新项目</td>
+<td>使用“打包”功能，可加前缀/后缀并自动更新引用</td>
+<td>直接Ctrl+C复制文件夹</td>
+<td>打包会更新文件间的引用关系</td>
+</tr>
+<tr>
+<td>重命名零件</td>
+<td>在SolidWorks中通过“另存为”或右键重命名</td>
+<td>在Windows资源管理器中直接重命名</td>
+<td>软件内重命名会自动更新引用</td>
+</tr>
+<tr>
+<td>生成新版模型</td>
+<td>打包后统一加版本后缀（如_v2），或使用PDM分支</td>
+<td>直接复制整个文件夹命名为v2</td>
+<td>打包生成的新版本与原版本独立</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">打包功能详解</p>
+<ul>
+<li><strong>路径</strong>：文件 → 打包</li>
+<li><strong>关键选项</strong>：可添加前缀或后缀，可预览所有引用关系，可选择打包哪些文件</li>
+<li><strong>适用场景</strong>：项目复制、版本分支、跨项目迁移</li>
+</ul>
+</div>
+<h3 id="_8">版本迭代策略</h3>
+<p>参考主流PDM的“修订版-迭代”概念：</p>
+<ul>
+<li><strong>修订版（Revision）</strong>：重大设计变更，对外发布，如V1.0 → V2.0</li>
+<li><strong>迭代（Iteration）</strong>：小修改和优化，内部存档，如V1.0 → V1.1</li>
+</ul>
+<p><strong>推荐文件夹结构</strong>：
+项目X/
+├── Released/ # 已发布版本（归档，只读）
+│ ├── V1.0/
+│ └── V2.0/
+├── Working/ # 开发中版本（可读写）
+│ ├── V1.1/ # 迭代开发中
+│ └── V2.1/
+└── Common/ # 公共资源库
+├── Fasteners/ # 紧固件
+├── StandardParts/ # 通用件
+└── Libraries/ # 设计库、成形工具等</p>
+<p><strong>版本命名规范</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>版本类型</th>
+<th>命名格式</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正式发布版</td>
+<td>V主版本.次版本</td>
+<td>V2.0</td>
+<td>通过评审，对外交付</td>
+</tr>
+<tr>
+<td>开发迭代版</td>
+<td>V主版本.次版本</td>
+<td>V2.1</td>
+<td>在正式版基础上的修改</td>
+</tr>
+<tr>
+<td>实验性分支</td>
+<td>V主版本.次版本_分支标识</td>
+<td>V2.1_alt</td>
+<td>方案探索，可能被废弃</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">外部引用管理</h3>
+<p><strong>标准件与通用件管理原则</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>零部件类型</th>
+<th>存放位置</th>
+<th>引用方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>螺钉、轴承等标准件</td>
+<td>公共库 <code>Common/Fasteners/</code></td>
+<td>直接链接</td>
+<td>所有项目共用一套，禁止复制到项目文件夹</td>
+</tr>
+<tr>
+<td>通用件（O形圈、密封件）</td>
+<td>公共库 <code>Common/StandardParts/</code></td>
+<td>直接链接</td>
+<td>参数固化，禁止修改</td>
+</tr>
+<tr>
+<td>跨项目专用件</td>
+<td>直接链接</td>
+<td>仅当确定源文件不会影响原项目时使用</td>
+<td>慎用，优先使用打包复制</td>
+</tr>
+<tr>
+<td>本项目专用件</td>
+<td>本项目文件夹</td>
+<td>正常引用</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>跨项目引用的风险评估</strong>：</p>
+<ul>
+<li><strong>直接链接</strong>：源文件修改后，所有引用它的项目都会自动更新。适用于确定不会变更的成熟零件。</li>
+<li><strong>打包复制</strong>：源文件修改后，已复制的副本不受影响。适用于还在迭代中的零件，或需要独立修改的场景。</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">关键系统设置</p>
+<p><strong>路径</strong>：系统选项 → 外部参考</p>
+<ul>
+<li>“允许创建模型外部参考”：控制是否允许创建关联关系</li>
+<li>“当编辑装配体时，允许零件具有多个关联”：控制是否允许一个零件参考多个外部对象</li>
+<li>“加载参考文档”的四种模式：提示/全部/无/仅更改</li>
+</ul>
+</div>
+<hr />
+<h2 id="3d_1">3D建模规范</h2>
+<p>3D建模规范是具体建模工作层面的指导，决定了单个模型的质量和可维护性。</p>
+<h3 id="top-downbottom-up_1">Top-down与Bottom-up的选用原则</h3>
+<p><strong>两种方法对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>设计场景</th>
+<th>推荐方法</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准件/外购件（电机、轴承）</td>
+<td>Bottom-up</td>
+<td>尺寸固定，不随设计变化</td>
+</tr>
+<tr>
+<td>配合尺寸关键件（舱体、端盖）</td>
+<td>Top-down</td>
+<td>尺寸联动，改一处自动更新</td>
+</tr>
+<tr>
+<td>钣金件/支架/外壳</td>
+<td>Top-down</td>
+<td>形状依赖其他零件位置</td>
+</tr>
+<tr>
+<td>复杂装配体的顶层规划</td>
+<td>布局草图法</td>
+<td>可在3D建模前快速迭代方案</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top-down的两种实现方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>布局草图法</td>
+<td>在装配体中创建草图定义关键尺寸，各零件参考此草图</td>
+<td>顶层设计，核心配合关系</td>
+</tr>
+<tr>
+<td>关联特征法</td>
+<td>在装配体中编辑零件，特征参考其他零件的几何体</td>
+<td>单个零件对另一个零件的依赖</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Top-down使用原则</p>
+<ul>
+<li>布局草图应尽量简化，只包含必要的尺寸和几何关系</li>
+<li>避免零件之间的相互参考（A参考B，B也参考A）</li>
+<li>定期检查外部参考状态，及时锁定已稳定的参考</li>
+</ul>
+</div>
+<h3 id="_10">参数化建模的使用原则</h3>
+<p><strong>参数化建模的定义</strong>：通过方程式、全局变量、链接尺寸等方式，建立尺寸之间的数学关系，实现“修改一个参数，相关尺寸自动更新”。</p>
+<p><strong>适用场景</strong>：
+- 需要频繁调整的设计参数（如产品系列化的关键尺寸）
+- 存在明确几何关系的尺寸（如“端盖外径 = 舱体外径”）
+- 需要从装配体传递到零件的尺寸</p>
+<p><strong>不适用场景</strong>：
+- 一次性使用的零件
+- 关系复杂且不易维护的参数网络
+- 设计尚未冻结的早期阶段</p>
+<p><strong>实施原则</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设计意图驱动</td>
+<td>方程式表达“是什么关系”，而非“等于多少”</td>
+<td>“端盖外径 = 舱体外径”而非“端盖外径 = 100”</td>
+</tr>
+<tr>
+<td>关键尺寸集中管理</td>
+<td>使用全局变量或布局草图统一管理核心参数</td>
+<td>在布局草图中定义所有关键尺寸</td>
+</tr>
+<tr>
+<td>适度原则</td>
+<td>不要过度参数化，简单零件直接建模更快</td>
+<td>一个垫圈的厚度不需要关联到舱体的壁厚</td>
+</tr>
+<tr>
+<td>注释说明</td>
+<td>在方程式中添加注释</td>
+<td><code>// 舱体外径，修改时需同步更新端盖</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>方程式系统的两种实现方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>位置</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>装配体级方程式</td>
+<td>装配体中</td>
+<td>无需开启外部参考，控制参数统一管理</td>
+<td>顶层参数定义</td>
+</tr>
+<tr>
+<td>零件级方程式</td>
+<td>零件中</td>
+<td>需要开启外部参考，参数跟随零件独立</td>
+<td>零件内部尺寸关系</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_11">配置功能的应用与陷阱</h3>
+<p><strong>配置的定义</strong>：在同一个文件中创建多个变体，每个变体可拥有不同的尺寸、特征状态、属性等。</p>
+<p><strong>适用场景</strong>：
+- 系列化零件（如不同长度的螺钉、不同口径的密封圈）
+- 同一零件的不同状态（如展开/折弯的钣金件）
+- 爆炸视图的不同阶段
+- 简化/详细表示（大型装配体中使用简化配置提升性能）</p>
+<div class="admonition danger">
+<p class="admonition-title">配置功能的陷阱</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>风险</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>结构差异较大的变体</td>
+<td>配置过多导致文件体积膨胀，特征管理混乱</td>
+<td>另存为新零件</td>
+</tr>
+<tr>
+<td>与设计表结合时某些特征无法配置</td>
+<td>设计表配置后模型未按预期变化</td>
+<td>提前确认哪些特征支持设计表配置</td>
+</tr>
+<tr>
+<td>多个配置共享特征，修改时遗漏</td>
+<td>在一个配置中修改特征，其他配置未同步</td>
+<td>使用设计表管理配置</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>设计表使用建议</strong>：
+- 设计表支持Excel驱动，便于与BOM对接
+- 在设计表中，可使用“$状态@特征名”来控制特征的压缩/解压缩
+- 设计表修改后，务必检查模型是否按预期更新</p>
+<h3 id="_12">外部参考的“冲突前后关系”问题</h3>
+<p><strong>问题描述</strong>：在装配体中编辑零件草图时，想选中另一个零件的边线作为参考，却弹出提示：“不能使用选择，如允许此选择将生成有冲突的前后关系”。</p>
+<p><strong>问题本质</strong>：SolidWorks默认设置不允许一个零件同时参考多个外部对象，担心形成过于复杂的依赖链。</p>
+<p><strong>解决方案</strong>：系统选项 → 外部参考 → 勾选“当编辑装配体时，允许零件具有多个关联”。</p>
+<div class="admonition note">
+<p class="admonition-title">使用原则</p>
+<ul>
+<li>只在必要时开启</li>
+<li>开启后需自行对依赖链的合理性负责</li>
+<li>定期检查外部参考状态，避免形成循环引用</li>
+</ul>
+</div>
+<h3 id="_13">循环引用的识别与修复</h3>
+<p><strong>定义</strong>：依赖关系形成闭环，如零件A参考零件B，零件B又参考零件A，修改任一参数时软件陷入无限循环的重算。</p>
+<p><strong>典型症状</strong>：
+- FeatureManager设计树中持续出现重建符号（红绿灯标志）
+- 即使按Ctrl+Q强制重建，符号仍不消失
+- 模型响应变慢，甚至频繁崩溃</p>
+<p><strong>常见成因</strong>：
+- 在装配体中，子装配体中的零件引用了顶层装配体的零件
+- 方程式形成闭环：D1 = D2, D2 = D3, D3 = D1
+- 相互关联的参考几何体（如互相偏移的基准面）</p>
+<p><strong>定位方法</strong>：使用“性能评估”工具 → 重建性能分析，可定位到问题零件。</p>
+<p><strong>修复方法</strong>：
+1. 锁定问题零件的外部参考
+2. 观察错误是否消失
+3. 分析依赖关系，找到循环节点
+4. 删除或重构问题特征</p>
+<h3 id="_14">大型装配体性能优化</h3>
+<p><strong>性能问题的典型表现</strong>：
+- 打开装配体需要几分钟甚至十几分钟
+- 旋转、缩放视图时卡顿
+- 添加配合时等待时间过长</p>
+<p><strong>优化策略</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>操作</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大型装配体模式</td>
+<td>自动降低显示精度、禁用边线反走样</td>
+<td>500个以上零件</td>
+</tr>
+<tr>
+<td>轻化装入</td>
+<td>只加载模型显示数据，不加载特征数据</td>
+<td>不需要编辑的零件</td>
+</tr>
+<tr>
+<td>大型设计审阅</td>
+<td>只读模式，极速打开</td>
+<td>仅查看、测量、剖切</td>
+</tr>
+<tr>
+<td>封套功能</td>
+<td>将复杂子装配体设为封套，简化显示</td>
+<td>参考外部轮廓时</td>
+</tr>
+</tbody>
+</table>
+<p><strong>系统设置建议</strong>（选项 → 装配体）：
+- 超过500个零部件时使用大型装配体模式
+- 选项 → 性能 → 自动以轻化状态装入零部件</p>
+<h3 id="_15">草图与特征层面的常见错误速查</h3>
+<table>
+<thead>
+<tr>
+<th>错误类型</th>
+<th>特征</th>
+<th>解决方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悬空几何体</td>
+<td>尺寸或几何关系引用的边线/点已被删除</td>
+<td>重新附着或删除悬空关系</td>
+</tr>
+<tr>
+<td>零厚度几何体</td>
+<td>实体出现厚度为零的边线、顶点</td>
+<td>检查拉伸/切除特征的草图，避免共线</td>
+</tr>
+<tr>
+<td>过定义草图</td>
+<td>尺寸或几何关系冗余</td>
+<td>删除多余约束，让草图为“完全定义”状态</td>
+</tr>
+<tr>
+<td>抽壳错误</td>
+<td>抽壳厚度导致几何自交</td>
+<td>减小抽壳厚度，或调整圆角顺序</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_16">推荐工作流程与快速决策清单</h2>
+<p>本节是前文规范的落地执行工具。遇到具体问题时，可根据以下决策流程和速查表快速找到正确的操作路径。</p>
+<h3 id="_17">一、项目启动阶段：文件夹与版本策略</h3>
+<p><strong>决策流程</strong>：</p>
+<ul>
+<li>新项目/新版本</li>
+<li>如果是新项目：创建项目文件夹，使用打包工具从模板导入</li>
+<li>如果是新版本：<ul>
+<li>如果是重大设计变更：创建 Released/V2.0/ 文件夹，打包全部文件并加 _v2 后缀</li>
+<li>如果是小迭代：在 Working/V1.x/ 文件夹内迭代</li>
+</ul>
+</li>
+</ul>
+<p><strong>速查表</strong>：</p>
+<ul>
+<li>新建项目：从模板项目打包，清除冗余数据。关键命令：文件 → 打包，勾选“添加到压缩文件”</li>
+<li>生成新版本（重大）：打包并添加版本后缀。关键命令：文件 → 打包，后缀填入 _v2</li>
+<li>生成新版本（迭代）：原地修改，注释记录变更。关键命令：文件 → 属性 → 配置特定选项卡，填写修订说明</li>
+<li>复制零件到其他项目：打包并添加项目前缀。关键命令：文件 → 打包，前缀填入项目代号</li>
+</ul>
+<h3 id="_18">二、外部引用决策</h3>
+<p><strong>决策流程</strong>：</p>
+<ul>
+<li>需要引用一个外部零部件</li>
+<li>如果是标准件：统一存放于 Common/Fasteners/，所有项目共享引用</li>
+<li>如果是通用件：统一存放于 Common/StandardParts/，所有项目共享引用</li>
+<li>如果是项目专用件：<ul>
+<li>如果需要独立修改：打包复制到本项目文件夹，断开与原文件的链接</li>
+<li>如果不需要独立修改：直接链接到源文件位置</li>
+</ul>
+</li>
+</ul>
+<p><strong>速查表</strong>：</p>
+<ul>
+<li>螺钉、轴承等标准件：存放于公共库 Common/Fasteners/，采用直接链接方式引用。所有项目共用一套，禁止复制到项目文件夹</li>
+<li>通用件（O形圈、密封件）：存放于公共库 Common/StandardParts/，采用直接链接方式引用。参数固化，禁止修改</li>
+<li>跨项目专用件：采用直接链接方式引用，仅当确定源文件不会影响原项目时使用。慎用，优先使用打包复制</li>
+<li>本项目专用件：存放于本项目文件夹，采用正常引用方式</li>
+</ul>
+<h3 id="_19">三、建模方法选择</h3>
+<ul>
+<li>新设计的关键配合零件（舱体+端盖）：推荐 Top-down（布局草图）。理由：尺寸联动需求强，修改频率高</li>
+<li>外购件、标准件：推荐 Bottom-up。理由：尺寸固定，无需联动</li>
+<li>非关键支撑结构、支架：Top-down 或 Bottom-up 均可。理由：视与其他零件的依赖关系而定</li>
+<li>系列化零件：推荐配置 + 设计表。理由：同一模型表达多个规格</li>
+</ul>
+<p><strong>Top-down 决策要点</strong>：
+- 需要联动 → 使用布局草图
+- 需要跨零件参考 → 在装配体中创建零件，使用关联参考
+- 依赖关系复杂 → 评估是否可能形成循环引用</p>
+<p><strong>Bottom-up 决策要点</strong>：
+- 独立零件 → 直接建模，尺寸独立
+- 标准件 → 从 Toolbox 或公共库插入
+- 已存在的零件 → 直接插入装配体</p>
+<h3 id="_20">四、日常操作快速参考卡</h3>
+<ul>
+<li>重命名零件：正确方法是在 SolidWorks 中右键 → 重命名。禁止在 Windows 资源管理器中重命名</li>
+<li>复制零件：正确方法是文件 → 打包，或按住 Ctrl 拖拽到新位置。禁止使用 Ctrl+C / Ctrl+V</li>
+<li>移动零件：正确方法是文件 → 另存为（移动）。禁止在 Windows 资源管理器中剪切</li>
+<li>修改被引用的零件：正确方法是先评估影响范围，必要时锁定外部参考。禁止直接修改后不通知关联项目</li>
+<li>保存装配体：正确方法是装配体 + 所有关联零件一起保存。禁止只保存装配体不保存子零件</li>
+</ul>
+<h3 id="_21">五、性能优化快速清单</h3>
+<p>遇到大型装配体卡顿时，按此顺序排查：</p>
+<ol>
+<li>打开方式：使用“大型设计审阅”模式打开，仅查看不编辑</li>
+<li>零件加载：设置“自动以轻化状态装入零部件”</li>
+<li>显示优化：开启“大型装配体模式”，自动降低显示精度</li>
+<li>子装配体：将不编辑的复杂子装配体设为封套</li>
+<li>冗余数据：定期使用“性能评估”工具，检查并清除</li>
+</ol>
+<h3 id="_22">六、常见问题诊断速查表</h3>
+<ul>
+<li>模型持续显示重建符号：可能原因是循环引用。排查方向：性能评估 → 重建性能分析</li>
+<li>打开装配体时找不到零件：可能原因是文件路径变更。排查方向：右键缺失零件 → 替换，或使用“查找参考文件”</li>
+<li>修改零件后装配体不更新：可能原因是外部参考被锁定。排查方向：右键零件 → 列出外部参考，检查锁定状态</li>
+<li>配合报错：可能原因是参考面/边线丢失。排查方向：编辑配合，重新选择参考几何体</li>
+<li>Toolbox 零件无法调用：可能原因是库路径配置错误。排查方向：系统选项 → 文件位置 → Toolbox 文件夹</li>
+</ul>
+<hr />
+<h2 id="_23">附录</h2>
+<h3 id="_24">关键系统路径与设置</h3>
+<p><strong>SolidWorks 关键文件夹位置</strong>（系统选项 → 文件位置）：</p>
+<ul>
+<li>设计库：默认位置 C:\ProgramData...\Design Library，用途：成形工具、特征库</li>
+<li>焊件轮廓：默认位置 C:\ProgramData...\weldment profiles，用途：结构构件截面</li>
+<li>文件模板：建议自定义位置，用途：零件/装配体/工程图模板</li>
+<li>Toolbox：默认位置 C:\SOLIDWORKS Data\，用途：标准件库</li>
+</ul>
+<p><strong>最佳实践</strong>：
+- 将自定义模板放在非系统盘（如 D:\SW Templates），便于备份和迁移
+- 团队协作时，将设计库、焊件轮廓放在共享服务器，统一配置路径</p>
+<h3 id="_25">多用户环境下的文件锁定问题</h3>
+<p><strong>典型报错</strong>：“A sharing violation occurred while accessing an unnamed file”</p>
+<p><strong>发生场景</strong>：
+- 多人同时访问同一网络位置的模型文件
+- 文件被其他程序（如杀毒软件、云同步工具）锁定</p>
+<p><strong>解决方案</strong>：
+- 使用 PDM 系统管理多用户环境
+- 确保文件存储在网络共享而非本地
+- 关闭非必要的文件同步工具对工作目录的实时监控</p>
+<blockquote>
+<p>说明：本文档主要针对个人工作流，多用户环境建议使用专业的 PDM 系统。</p>
+</blockquote>
+<hr />
+<p><strong>文档版本</strong>：V1.0<br />
+<strong>适用软件</strong>：SolidWorks 2018<br />
+<strong>更新日期</strong>：2026年3月</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026-2026 Bridge Zhang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:zhangqiaohdu@outlook.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.highlight", "content.code.copy", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="../../javascripts/home.js"></script>
+      
+    
+  </body>
+</html>
