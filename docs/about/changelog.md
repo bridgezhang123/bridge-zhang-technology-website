@@ -11,6 +11,7 @@
 - 对部分站点说明文案进行润色，使表达更谦逊、邀请式，降低生硬感。
 - 统一站点中的邮箱地址为 `zhangqiaohdu@outlook.com`，并补充 Python / pip / MkDocs 环境问题的简明记录。
 - 调整本地预览时的 `contributors` 默认行为，并修复 `javascripts/mermaid.js` 的静态资源路径问题。
+- 新增 `vercel.json`，统一 Vercel 的安装命令、构建命令与输出目录，避免部署环境继续沿用旧配置。
 
 ## 2026-03-27
 
