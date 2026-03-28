@@ -8,6 +8,15 @@
 
 本网站首页采用了 Material for MkDocs 的模板思路（`template: home.html` + `overrides/home.html`），并结合本站内容做了最小化重构。感谢 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 提供的优秀主题与设计参考。
 
+## 缘起与启发 / Origin and Inspiration
+
+本网站采用 GitHub 仓库配合文档化写作的方式推进，核心出发点是把分散的学习记录、工程经验与结构化页面逐步沉淀为可长期维护的知识站点。
+
+在建站思路上，我受到 [SurviveSJTU/SurviveSJTUManual](https://github.com/SurviveSJTU/SurviveSJTUManual) 的启发较多。该项目以 GitHub 为协作与维护基础，持续整理和发布面向读者的文档内容。这种“以仓库承载内容、以版本管理支撑长期维护”的方式，对我理解文档站点应如何建设和积累有直接帮助，谨此致谢。
+
+!!! note "说明"
+    这里所受启发，主要在于“以 GitHub 作为内容协作与长期维护的平台”这一方法层面，而非照搬具体内容或结构。
+
 ## 建站简述
 
 这个网站的目标不是做“炫技型主页”，而是搭建一个面向机械专业学习与知识沉淀的长期文档站点。对我而言，它至少承担三件事：

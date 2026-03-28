@@ -4,6 +4,8 @@
 
 ## 2026-03-28
 
+- 在 [Building This Site / 建站说明](site-building.md) 中补充网站的建站缘起，说明本站以 GitHub 作为文档写作与长期维护平台的思路，并记录其受到 [SurviveSJTU/SurviveSJTUManual](https://github.com/SurviveSJTU/SurviveSJTUManual) 的启发与致谢。
+
 - 在 `mkdocs.yml` 中补充仓库信息，并启用 `View source of this page` 与 `Edit this page` 入口。
 - 接入文档元数据插件，为页面底部补充 `last updated`、`created` 与 `contributors` 信息，并同步调整构建依赖与 CI 配置。
 - 调整首页四张卡片的标题与文案，统一为中英双语表达，并补充协作说明页的跳转入口。
@@ -12,6 +14,7 @@
 - 统一站点中的邮箱地址为 `zhangqiaohdu@outlook.com`，并补充 Python / pip / MkDocs 环境问题的简明记录。
 - 调整本地预览时的 `contributors` 默认行为，并修复 `javascripts/mermaid.js` 的静态资源路径问题。
 - 新增 `vercel.json`，统一 Vercel 的安装命令、构建命令与输出目录，避免部署环境继续沿用旧配置。
+- 新增 `.python-version` 并调整 `vercel.json` 的安装命令，使本地与 Vercel 的 Python 版本和依赖安装过程更一致。
 
 ## 2026-03-27
 
