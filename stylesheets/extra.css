@@ -155,6 +155,18 @@
   color: #475569;
 }
 
+.home-card__link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-card__link:hover {
+  text-decoration: underline;
+}
+
 /* Third panel */
 .home-contact {
   background: #eef2f7;
@@ -238,5 +250,53 @@
 
   .home-hero {
     min-height: 78vh;
+  }
+}
+
+/* Content utility */
+.site-print-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.2rem 0 1.1rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-print-button:hover {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.24);
+  transform: translateY(-1px);
+}
+
+@media print {
+  .site-print-button,
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-source,
+  .md-search {
+    display: none !important;
+  }
+
+  .md-main,
+  .md-main__inner,
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .md-grid {
+    max-width: none !important;
   }
 }
