@@ -1,6 +1,5 @@
-﻿# About Me
+# About Me / 关于作者
 
-Bridge Zhang - Mechanical Engineer
+Bridge Zhang，机械工程师。
 
-
-
+本站主要用于整理机械设计、建模出图、制造测量及工程学习过程中的知识、规范与思考。

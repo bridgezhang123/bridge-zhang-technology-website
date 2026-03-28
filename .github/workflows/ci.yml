@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Configure Git Credentials
         run: |
           git config user.name github-actions[bot]
@@ -25,5 +27,8 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+      - run: python -m pip install -r requirements.txt
+      - run: python -m mkdocs gh-deploy --force
+        env:
+          ENABLE_GIT_COMMITTERS: "true"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

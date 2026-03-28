@@ -1,9 +1,12 @@
-# Copyright (c) 2026-2026 Bridge Zhang <bridge.zhang.123@gmail.com>
+# Copyright (c) 2026-2026 Bridge Zhang <zhangqiaohdu@outlook.com>
 
 # Project information
 site_name: Bridge Between Engineers
 site_url: https://www.bridgezhang.com/
 site_author: Bridge Zhang
+repo_url: https://github.com/bridgezhang123/bridge-zhang-technology-website
+repo_name: bridgezhang123/bridge-zhang-technology-website
+edit_uri: edit/main/docs/
 site_description: >-
   Mechanical engineering notes, design insights, and practical knowledge — bridging theory and real-world engineering.
   机械工程笔记、设计见解与实践知识 —— 连接理论与真实工程的桥梁。
@@ -23,9 +26,15 @@ theme:
     - navigation.top
     - navigation.indexes
     - search.highlight
+    - content.action.edit
+    - content.action.view
     - content.code.copy
     - content.tabs.link
     - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
   palette:
     - scheme: default
       primary: indigo
@@ -45,6 +54,18 @@ plugins:
       lang:
         - zh
         - en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+      enable_parallel_processing: false
+      enable_git_follow: false
+  - git-committers:
+      enabled: !ENV [ENABLE_GIT_COMMITTERS, true]
+      repository: bridgezhang123/bridge-zhang-technology-website
+      branch: main
+      docs_path: docs/
+      token: !ENV [GITHUB_TOKEN, ""]
 
 # Page tree
 nav:
@@ -77,6 +98,10 @@ nav:
     - about/index.md
     - About Me/关于作者: about/author.md
     - About Site/关于站点: about/site.md
+    - Building This Site/建站说明: about/site-building.md
+    - Collaboration/协作说明: about/collaboration.md
+    - Copyright & License/版权与许可: about/copyright-license.md
+    - Acknowledgements/致谢: about/acknowledgements.md
     - Changelog/更新日志: about/changelog.md
 
 extra:
@@ -112,3 +137,4 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
   - javascripts/home.js
+  - javascripts/print-button.js

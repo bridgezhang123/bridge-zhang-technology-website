@@ -40,6 +40,9 @@
       <article class="home-card" role="listitem">
         <h3>{{ card.get("title", "") }}</h3>
         <p>{{ card.get("description", "") }}</p>
+        {% if card.get("link") and card.get("link_text") %}
+        <a class="home-card__link" href="{{ card.get("link") }}">{{ card.get("link_text") }}</a>
+        {% endif %}
       </article>
       {% endfor %}
     </div>

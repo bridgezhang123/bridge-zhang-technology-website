@@ -20,19 +20,29 @@ secondary_button:
 scroll_text: Scroll down
 cards_title: Knowledge Areas
 cards:
-  - title: Mechanical Design
-    description: Principles and case studies of mechanical design.
-  - title: Tolerance & Precision
-    description: Fits, tolerances and precision engineering.
-  - title: Engineering Thinking
-    description: Long-term professional development.
-  - title: Tools & Methods
-    description: Engineering tools and workflows.
+  - title: Focused on Mechanics / 聚焦机械
+    description: >-
+      The site focuses on mechanical design, machining, measurement and adjacent workflows, aiming to connect design, manufacturing and inspection into one practical loop.
+      本站聚焦机械设计、机械加工、测量及相关流程，希望把设计、加工与检验串联成一个更完整的闭环。
+  - title: Open Collaboration / 开源共享
+    description: >-
+      The repository is open for collaborative improvement. If you have insights on design, manufacturing or inspection, you are welcome to contribute through GitHub or contact us by email.
+      仓库已开放协作。若您对设计、加工或检验有见解，欢迎通过 GitHub 参与，或通过邮件联系。
+    link_text: Learn how to contribute / 了解参与方式
+    link: about/collaboration/
+  - title: Long-term Support / 长期支持
+    description: >-
+      This site serves as the long-term source for articles published elsewhere. Suggestions and corrections will be gradually folded back into the source text and changelog.
+      本站作为其他平台文章的长期源站，会逐步将建议、勘误与补充整理回正文与更新日志中。
+  - title: Standards & Methods / 规范与方法
+    description: >-
+      Beyond isolated knowledge points, the site also values naming rules, drawing standards, workflows and reusable engineering methods.
+      除了知识点本身，本站也重视命名规则、出图标准、工作流与可复用的方法。
 about:
   title: About Site / 关于站点
   description: >-
-     - Thank you for visiting our website. As the author's expertise is limited, if you have any suggestions regarding the professional content, layout, or overall user experience of this mechanical engineering site, please feel free to contact us.
-     - 感谢您访问本网站！由于作者水平有限，若您对本站的专业内容、页面布局或使用体验有任何建议，欢迎随时与我们联系。 
+     Thank you for visiting. The content on this site is still being refined step by step; if you notice anything that could be improved in the technical content, structure or reading experience, your suggestions are sincerely welcome.
+     感谢您的来访。本站内容仍在持续整理与打磨之中；若您对专业内容、结构安排或阅读体验有任何建议，都欢迎提出。
   button_text: Learn More / 更多
   button_link: about/site/
 connect:
